@@ -6,8 +6,46 @@
     <title>Document</title>
 </head>
 <body>
-    <h1 id="numero"></h1>
-    <button id="generarTickets">A</button>
+    <div id="cuadro">
+        <h1 id="numero" style="color: white; font-size: 150px;"></h1>
+        <button id="generarTickets">Generar ticket</button>
+    </div>
 </body>
 <script src="main.js"></script>
+<style>
+
+    body{
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(19, 161, 161);
+    }
+
+    #cuadro{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        height: 97%;
+        width: 98%;
+        background-color: rgb(17, 116, 116);
+    }
+
+    #generarTickets{
+        border-radius: 12px; 
+        border: 0; 
+        height: 50px;
+        width: 180px;
+        font-size: 25px;
+    }
+
+    #generarTickets:hover{
+        background-color: rgb(19, 161, 161);
+        color: white;
+    }
+
+</style>
 </html>
