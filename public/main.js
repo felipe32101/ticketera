@@ -9,3 +9,7 @@ document.getElementById("generarTicket").addEventListener('click', function(){
         })
     })
 })
+
+document.getElementById("pantalla").addEventListener('click', function(){
+    let nuevaPest = window.open("pantallaPublico.html")
+})
