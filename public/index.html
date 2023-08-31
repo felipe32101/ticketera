@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>trabajo</title>
+</head>
+<body>
+    <div id="part1">
+        <div id="part1Cuadro">
+            <h1 style="color: white; font-size: 40px;">Escriba el escritorio donde va a trabajar</h1>
+            <div style="width: 97%; display: flex; flex-direction: row; justify-content: center; align-items: center; gap: 12px; height: 55px;">
+                <input type="text" name="" id="" placeholder="Numero de escritorio" style="width: 30%; height: 25px;">
+                <button style="border-radius: 12px; border: 0; height: 25px;" id="aceptar">Aceptar</button>
+            </div>
+        </div>
+    </div>
+    <div id="part2">
+        <div id="part2Cuadro">
+            <h1 style="color: white; font-size: 40px;">Seleccione que pantalla quiere a sus clientes</h1>
+            <div style="width: 97%; display: flex; flex-direction: row; justify-content: center; align-items: center; gap: 12px;">
+                <button style="border-radius: 12px; border: 0; width: 200px;" class="opcion" id="generarTicket">Ticketera</button>
+                <h1 style="color: white; font-size: 40px; margin: 0;">O</h1>
+                <button style="border-radius: 12px; border: 0; width: 200px;" class="opcion">Pantalla a publico</button>
+            </div>
+            
+        </div>
+    </div>
+</body>
+<script src="/socket.io/socket.io.js"> </script>
+<script src="main.js"></script>
+<style>
+    body{
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        text-align: center;
+    }
+    
+    #part1{
+        background-color: rgb(19, 161, 161);
+        height: 100%;
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #part1Cuadro{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        height: 97%;
+        width: 97%;
+        background-color: rgb(17, 116, 116);
+    }
+
+    #aceptar:hover{
+        background-color: rgb(19, 161, 161);
+        color: white;
+    }
+
+    #part2{
+        background-color: beige;
+        height: 100%;
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #part2Cuadro{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        height: 97%;
+        width: 97%;
+        background-color: rgb(174, 174, 156);
+    }
+
+    .opcion{
+        font-size: 20px;
+        height: 55px;
+    }
+
+    .opcion:hover{
+        background-color: beige;
+    }
+</style>
+</html>
