@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>trabajo</title>
+</head>
+
+<body>
+    <div id="part1">
+        <div id="part1Cuadro">
+            <div style="display: flex; gap: 20px; align-items: center; width: 100%; justify-content: center;">
+                <h1 style="color: white; font-size: 40px;" id="numEscritorio">Escritorio numero:</h1>
+                <h1 id="numero" style="font-size: 40px; color: white;"> </h1>
+            </div>
+            <div style="display: flex; gap: 25px;">
+                <button class="tomar" style="border-radius: 12px; border: 0; height: 25px;"> Atender Ticket</button>
+                <button class="volver" style="border-radius: 12px; border: 0; height: 25px;"> Volver</button>
+
+            </div>
+            
+        </div>
+    </div>
+    <div id="part2">
+        <div id="part2Cuadro">
+        </div>
+    </div>
+</body>
+<script src="/socket.io/socket.io.js"> </script>
+<script src="main.js">
+</script>
+<script>
+    const url = new URLSearchParams(window.location.search);
+    const numeroEscritorio = url.get('numero');
+    document.getElementById("numero").textContent = numeroEscritorio;</script>
+
+<style>
+    body {
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        text-align: center;
+    }
+
+    #part1 {
+        background-color: rgb(19, 161, 161);
+        height: 100%;
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #part1Cuadro {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        height: 97%;
+        width: 97%;
+        background-color: rgb(17, 116, 116);
+    }
+
+    #part2 {
+        background-color: beige;
+        height: 100%;
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #part2Cuadro {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        height: 97%;
+        width: 97%;
+        background-color: rgb(174, 174, 156);
+    }
+    .tomar:hover{
+        background-color: rgb(19, 161, 161);
+        color: white;
+        cursor: pointer;
+    
+    }
+    .volver:hover{
+        background-color: rgb(19, 161, 161);
+        color: white;
+        cursor: pointer;
+    
+    }
+</style>
+
+</html>

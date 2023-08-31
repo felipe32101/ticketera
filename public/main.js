@@ -13,3 +13,9 @@ document.getElementById("generarTicket").addEventListener('click', function(){
 document.getElementById("pantalla").addEventListener('click', function(){
     let nuevaPest = window.open("pantallaPublico.html")
 })
+
+document.getElementById("aceptar").addEventListener('click', function(){
+    const numeroEscritorio = document.getElementById("input").value;
+
+    let nuevaPest = window.open(`aceptar.html?numero=${numeroEscritorio}`);
+});
