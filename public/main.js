@@ -9,3 +9,8 @@ document.getElementById("generarTicket").addEventListener('click', function(){
         })
     })
 })
+document.getElementById("aceptar").addEventListener('click', function(){
+    const numeroEscritorio = document.getElementById("input").value;
+
+    let nuevaPest = window.open(`aceptar.html?numero=${numeroEscritorio}`);
+});
