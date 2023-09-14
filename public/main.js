@@ -1,25 +1,28 @@
 const numerosSeleccionados = [];
 
+let contador = parseInt(localStorage.getItem('ticketCounter')) || 0;
+
 document.getElementById("generarTicket").addEventListener('click', function(){
-    let nuevaPest = window.open("ticketera.html")
+    let nuevaPest = window.open("ticketera.html");
+    
     nuevaPest.addEventListener("load", function (){
-        let contador = 0    
+        let text = nuevaPest.document.getElementById("numero");
+        text.textContent = +contador;
         nuevaPest.document.getElementById('generarTickets').addEventListener("click", function(){
             contador++;
-            let text = nuevaPest.document.getElementById("numero")
-            text.textContent = +contador
-        })
-    })
-})
+            text.textContent = +contador;
+            localStorage.setItem('ticketCounter', contador.toString());
+        });
+    });
+});
 
 document.getElementById("pantalla").addEventListener('click', function(){
-    let nuevaPest = window.open("pantallaPublico.html")
-})
+    let nuevaPest = window.open("pb.html");
+});
 
 document.getElementById("aceptar").addEventListener('click', function(){
     const numeroEscritorio = document.getElementById("input").value;
 
-    
     if (numeroEscritorio.trim() === "" || parseInt(numeroEscritorio) === 0) {
         alert("Por favor, ingrese un número de escritorio válido.");
     } else if (numerosSeleccionados.includes(numeroEscritorio)) {
