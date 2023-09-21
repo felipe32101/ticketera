@@ -7,7 +7,7 @@ document.getElementById("generarTicket").addEventListener('click', function(){
         nuevaPest.document.getElementById('generarTickets').addEventListener("click", function(){
             contador++;
             let text = nuevaPest.document.getElementById("numero")
-            text.textContent = +contador
+            text.textContent =+ contador
         })
     })
 })
