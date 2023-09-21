@@ -4,16 +4,6 @@ let contador = parseInt(localStorage.getItem('ticketCounter')) || 0;
 
 document.getElementById("generarTicket").addEventListener('click', function(){
     let nuevaPest = window.open("ticketera.html");
-    
-    nuevaPest.addEventListener("load", function (){
-        let text = nuevaPest.document.getElementById("numero");
-        text.textContent = +contador;
-        nuevaPest.document.getElementById('generarTickets').addEventListener("click", function(){
-            contador++;
-            let text = nuevaPest.document.getElementById("numero")
-            text.textContent =+ contador
-        })
-    })
 })
 
 document.getElementById("pantalla").addEventListener('click', function(){
