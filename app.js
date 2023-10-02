@@ -3,7 +3,6 @@ import controllerSockets from "./sockets/controller.js"
 import express from 'express'
 import http from 'http'
 import * as io from 'socket.io'
-
 const port=process.env.PORT
 let app = express();
 app.use(express.json());
