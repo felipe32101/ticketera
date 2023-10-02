@@ -2,7 +2,7 @@ const controllerSockets = (socket) => {
     console.log(socket.id);
 
 
-    const Tickets = []
+    
 
     socket.on('saludar', async (mensaje, callback) => {
         console.log(`hola ${mensaje.nombre}`);
@@ -14,8 +14,8 @@ const controllerSockets = (socket) => {
         
     })
     socket.on("Ticket",(text)=>{
-        Tickets.push(text)
-        socket.broadcast.emit("Tick", Tickets)
+       
+        socket.broadcast.emit("Tick", text)
     })
 }
 
