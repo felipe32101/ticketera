@@ -1,16 +1,6 @@
 const socket = io();
-
-socket.on('connect', () => {
-    console.log("Conectado a Socket.IO en aceptar.js");
-});
-socket.on('nuevo-ticket', (data) => {
-    console.log("Nuevo ticket recibido en aceptar.js:", data.numero);
-
-    const lblTicket = document.querySelector('small');
-    lblTicket.innerText = "Ticket " + data.numero;
-});
-
 let contador = parseInt(localStorage.getItem('ticketCounter')) || 0;
+
 addEventListener("load", function (){
     let text = document.getElementById("numero");
     text.textContent = +contador;
@@ -20,3 +10,12 @@ addEventListener("load", function (){
         text.textContent =+ contador
     })
 })
+socket.on('connect', () => {
+    console.log("Conectado a Socket.IO en aceptar.js");
+});
+socket.on('nuevo-ticket', (data) => {
+    console.log("Nuevo ticket recibido en aceptar.js:", data.numero);
+
+    const lblTicket = document.querySelector('small');
+    lblTicket.innerText = "Ticket " + data.numero;
+});
