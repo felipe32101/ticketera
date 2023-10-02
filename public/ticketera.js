@@ -1,11 +1,11 @@
-let contador = parseInt(localStorage.getItem('ticketCounter')) || 0;
+const socket = io()
 
-addEventListener("load", function (){
-    let text = document.getElementById("numero");
-    text.textContent = +contador;
-    document.getElementById('generarTickets').addEventListener("click", function(){
+let contador = parseInt(localStorage.getItem('ticketCounter')) || 0;
+const text = document.getElementById("numero")
+
+document.getElementById('generarTickets').addEventListener("click", function(){
         contador++;
-        let text = document.getElementById("numero")
         text.textContent =+ contador
+        socket.emit("Ticket",text)
+        console.log(text);
     })
-})
